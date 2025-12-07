@@ -1,0 +1,148 @@
+import WidgetKit
+import SwiftUI
+import AppIntents
+
+// 1. 刷新按鈕動作
+struct ReloadWidgetIntent: AppIntent {
+    static var title: LocalizedStringResource = "重新整理"
+    
+    func perform() async throws -> some IntentResult {
+        // 強制清除緩存並重新讀取數據
+        UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.synchronize()
+        
+        // 重新載入所有 Widget 時間線
+        WidgetCenter.shared.reloadAllTimelines()
+        
+        // 添加延遲確保數據同步
+        try await Task.sleep(nanoseconds: 500_000_000) // 0.5 秒
+        
+        return .result()
+    }
+}
+
+// 2. 資料結構
+struct VitaminWidgetEntry: TimelineEntry {
+    let date: Date
+    let lastAction: String?
+    let todayProgress: Double
+}
+
+// 3. 時間線提供者
+struct Provider: TimelineProvider {
+    func placeholder(in context: Context) -> VitaminWidgetEntry {
+        VitaminWidgetEntry(date: Date(), lastAction: "準備中...", todayProgress: 0)
+    }
+    
+    func getSnapshot(in context: Context, completion: @escaping (VitaminWidgetEntry) -> ()) {
+        let entry = VitaminWidgetEntry(date: Date(), lastAction: loadLast(), todayProgress: loadProgress())
+        completion(entry)
+    }
+    
+    func getTimeline(in context: Context, completion: @escaping (Timeline<VitaminWidgetEntry>) -> ()) {
+        let entry = VitaminWidgetEntry(date: Date(), lastAction: loadLast(), todayProgress: loadProgress())
+        // 設定 .never，依賴主 App 吃藥時觸發更新
+        let timeline = Timeline(entries: [entry], policy: .never)
+        completion(timeline)
+    }
+    
+    // 讀取 App Group 資料 (確保 ID 正確)
+    func loadLast() -> String? {
+        UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.string(forKey: "lastAction")
+    }
+    func loadProgress() -> Double {
+        UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.double(forKey: "todayProgress") ?? 0
+    }
+}
+
+// 4. 畫面設計
+struct VitaminWidgetEntryView : View {
+    var entry: Provider.Entry
+    
+    // 根據 Widget 大小調整版面
+    @Environment(\.widgetFamily) var family
+    
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                    Image(systemName: "pills.fill").foregroundStyle(.blue)
+                    Text("維他命管家").font(.caption2).bold().foregroundStyle(.secondary)
+                }
+                
+                Text(entry.lastAction ?? "尚未服用")
+                    .font(.system(size: 16, weight: .bold))
+                    .lineLimit(2)
+                    .minimumScaleFactor(0.8)
+                
+                if let lastDate = UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.object(forKey: "lastActionTime") as? Date {
+                    // ⚠️ 修改重點：使用自訂格式顯示完整日期時間
+                    // 格式範例：2023年12月07日 星期四 22:15
+                    Text(dateFormatter.string(from: lastDate))
+                        .font(.caption2)
+                        .foregroundStyle(.gray)
+                }
+            }
+            
+            Spacer()
+            
+            // 右側：如果是中型 Widget，顯示更多資訊或按鈕
+            VStack(alignment: .trailing) {
+                // 刷新按鈕
+                Button(intent: ReloadWidgetIntent()) {
+                    Image(systemName: "arrow.clockwise.circle.fill")
+                        .font(.title2)
+                        .foregroundStyle(.gray.opacity(0.5))
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
+                
+                // 進度圈
+                ZStack {
+                    Circle().stroke(Color.gray.opacity(0.2), lineWidth: 5)
+                    Circle().trim(from: 0, to: CGFloat(entry.todayProgress))
+                        .stroke(
+                            LinearGradient(colors: [.blue, .cyan], startPoint: .top, endPoint: .bottom),
+                            style: StrokeStyle(lineWidth: 5, lineCap: .round)
+                        )
+                        .rotationEffect(.degrees(-90))
+                    
+                    Text("\(Int(entry.todayProgress * 100))%")
+                        .font(.system(size: 10, weight: .bold))
+                }
+                .frame(width: 40, height: 40)
+            }
+        }
+        .containerBackground(for: .widget) { Color(uiColor: .systemBackground) }
+    }
+}
+
+// 建立一個日期格式化工具
+private let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.locale = Locale(identifier: "zh_TW") // 強制使用繁體中文
+    // 設定格式：年-月-日 星期幾 時:分
+    formatter.dateFormat = "yyyy年MM月dd日 EEEE HH:mm"
+    return formatter
+}()
+
+// 5. 設定入口
+@main
+struct VitaminWidget: Widget {
+    let kind: String = "VitaminWidget"
+    var body: some WidgetConfiguration {
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            if #available(iOS 17.0, *) {
+                VitaminWidgetEntryView(entry: entry)
+                    .containerBackground(.fill.tertiary, for: .widget)
+            } else {
+                VitaminWidgetEntryView(entry: entry)
+                    .padding()
+                    .background()
+            }
+        }
+        .configurationDisplayName("服藥紀錄")
+        .description("顯示最近服藥紀錄")
+        .supportedFamilies([.systemSmall, .systemMedium])
+    }
+}

@@ -1,11 +1,5 @@
-//
-//  Vitamin_ManagerApp.swift
-//  Vitamin Manager
-//
-//  Created by Allison on 2025/12/7.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct Vitamin_ManagerApp: App {
@@ -13,5 +7,8 @@ struct Vitamin_ManagerApp: App {
         WindowGroup {
             ContentView()
         }
+        // ⚠️ 關鍵修正：這裡必須改成 VitaminItem.self
+        // 這樣才能跟 ContentView 裡面的新模型對上
+        .modelContainer(for: VitaminItem.self)
     }
 }
