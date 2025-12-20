@@ -1,5 +1,6 @@
 import SwiftUI
 import SwiftData
+import UserNotifications
 
 @main
 struct Vitamin_ManagerApp: App {
@@ -23,12 +24,68 @@ struct Vitamin_ManagerApp: App {
                 fatalError("💥 完全無法初始化 ModelContainer: \(error)")
             }
         }
+        
+        // 初始化通知管理器
+        setupNotifications()
     }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    // 當應用程式出現時重新安排通知
+                    rescheduleNotificationsIfNeeded()
+                }
         }
         .modelContainer(container)
+    }
+    
+    // MARK: - 通知設置
+    private func setupNotifications() {
+        // 請求通知權限
+        NotificationManager.shared.requestNotificationPermission()
+        
+        // 設定通知代理
+        UNUserNotificationCenter.current().delegate = NotificationDelegate.shared
+    }
+    
+    // MARK: - 重新安排通知
+    private func rescheduleNotificationsIfNeeded() {
+        // 獲取所有藥物數據並重新安排通知
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            do {
+                let context = container.mainContext
+                let descriptor = FetchDescriptor<VitaminItem>()
+                let pills = try context.fetch(descriptor)
+                
+                // 重新安排所有通知
+                NotificationManager.shared.rescheduleAllNotifications(for: pills)
+            } catch {
+                print("❌ 無法獲取藥物數據以重新安排通知: \(error)")
+            }
+        }
+    }
+}
+
+// MARK: - 通知代理
+class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
+    static let shared = NotificationDelegate()
+    
+    // 當應用程式在前景時收到通知
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // 在前景顯示通知
+        completionHandler([.banner, .sound, .badge])
+    }
+    
+    // 當用戶點擊通知時
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        
+        if let pillName = userInfo["pillName"] as? String {
+            print("🔔 用戶點擊了 \(pillName) 的提醒通知")
+            // 這裡可以添加更多操作，比如直接跳轉到該藥物的詳細頁面
+        }
+        
+        completionHandler()
     }
 }

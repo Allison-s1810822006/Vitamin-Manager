@@ -59,8 +59,20 @@ struct PillRowView: View {
                 
                 if !pill.medicationTime.isEmpty {
                     Text("服藥時間：\(pill.medicationTime)")
-                        .font(.headline)
+                        .font(.subheadline)
                         .foregroundStyle(.secondary)
+                }
+                
+                // 提醒時間顯示
+                if pill.enableReminder, let reminderTime = pill.reminderTime {
+                    HStack(spacing: 4) {
+                        Image(systemName: "bell.badge")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+                        Text("提醒時間：\(timeFormatter.string(from: reminderTime))")
+                            .font(.caption)
+                            .foregroundStyle(.orange)
+                    }
                 }
                 
                 Text("每次 \(pill.quantity) 顆")

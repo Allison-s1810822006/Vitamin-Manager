@@ -218,7 +218,7 @@ struct EditPillView: View {
         ("pink", Color.pink, "粉色"),
         ("gray", Color.gray, "灰色")
     ]
-
+    
     init(pill: VitaminItem) {
         self.pill = pill
         _name = State(initialValue: pill.name)
@@ -230,7 +230,7 @@ struct EditPillView: View {
         _enableReminder = State(initialValue: pill.enableReminder)
         _reminderTime = State(initialValue: pill.reminderTime ?? Date())
     }
-
+    
     var body: some View {
         NavigationStack {
             Form {

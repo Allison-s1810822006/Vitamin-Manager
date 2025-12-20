@@ -75,7 +75,12 @@ struct PillListView: View {
     
     func deleteItems(offsets: IndexSet) {
         withAnimation {
-            for index in offsets { context.delete(pills[index]) }
+            for index in offsets { 
+                let pill = pills[index]
+                // 移除該藥物的通知
+                NotificationManager.shared.removeNotification(for: pill)
+                context.delete(pill) 
+            }
         }
     }
 }

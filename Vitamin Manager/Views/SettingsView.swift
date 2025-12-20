@@ -51,6 +51,10 @@ struct SettingsView: View {
     }
     
     private func performClearAllData() {
+        // 清除所有通知
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        print("🗑️ 已清除所有提醒通知")
+        
         // 清除所有藥物資料
         for pill in pills {
             context.delete(pill)
