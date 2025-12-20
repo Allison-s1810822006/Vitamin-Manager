@@ -6,12 +6,14 @@
 
 ---
 
-## 🏗️ 系統架構（System Architecture）
+# 🏗️ 系統架構（System Architecture）
 
-> 本專案使用 **SwiftData 本機儲存**  
+> 本系統採用 SwiftUI 作為使用者介面，資料以 SwiftData 儲存在本機。  
+> 使用者操作畫面後，相關資料會同步更新至資料層，並由本地通知模組負責服藥提醒。  
+> Widget 透過 App Group 讀取共享資料，僅進行顯示，不直接修改資料。
 > ❌ 未啟用 iCloud / CloudKit（因專案穩定性考量）
 
-```mermaid
+```
 flowchart TB
   subgraph App[iOS App]
     UI[SwiftUI Views]
@@ -28,12 +30,13 @@ flowchart TB
   end
 
   GM --> W
+```
 
 ---
 
-## 📁 專案結構（Project Structure）
+# 📁 專案結構（Project Structure）
 
-```text
+```
 VitaminManager
 ├── README.md
 ├── assets/
@@ -69,10 +72,10 @@ VitaminManager
 │   └── VitaminWidgetLiveActivity.swift
 │
 └── VitaminManagerApp.swift
-
+```
 ---
 
-## 📌 專案特色
+# 📌 專案特色
 
 - 一頁式設計，操作直覺、學習成本低  
 - 使用 **SwiftData（Local Store）** 儲存服藥資料  
@@ -84,7 +87,7 @@ VitaminManager
 
 ---
 
-## 🧩 系統功能說明
+# 🧩 系統功能說明
 
 ### 1️⃣ 我的藥盒
 - 顯示所有已建立的維他命／保健食品
@@ -128,8 +131,6 @@ VitaminManager
 
 ## 📱 App Screenshots
 
-> 圖片請放在 `assets/screenshots/`
-
 ### 我的藥盒（清單與已服用狀態）
 <img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 28" src="https://github.com/user-attachments/assets/ff8c77ee-eaa0-4987-aa1e-4de6fa4984f1" />
 
@@ -150,8 +151,6 @@ VitaminManager
 
 ## 🧩 Widget & Notification
 
-> 圖片請放在 `assets/widget/`
-
 ### 桌面 Widget
 <img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 52 10" src="https://github.com/user-attachments/assets/e09634fb-51ce-4963-8029-1f35fe6f11a1" />
 
@@ -165,7 +164,8 @@ VitaminManager
 
 ---
 
-## 🎥 Demo（操作示範）
+## 🎥 Demo（影片操作示範）
 https://github.com/user-attachments/assets/ea050126-8f20-4e7b-b99e-da47217b9a87
 
 ---
+
