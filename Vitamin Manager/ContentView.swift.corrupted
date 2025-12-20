@@ -2,26 +2,34 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
+    @Query private var vitamins: [VitaminItem]
+    @Environment(\.modelContext) private var modelContext
+    @State private var selectedTab: Int = 0
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             PillListView()
                 .tabItem {
-                    Image(systemName: "pills.circle")
+                    Image(systemName: "pills.fill")
                     Text("我的藥盒")
                 }
+                .tag(0)
             
             StatsView()
                 .tabItem {
-                    Image(systemName: "chart.bar")
+                    Image(systemName: "chart.bar.fill")
                     Text("統計")
                 }
+                .tag(1)
             
             SettingsView()
                 .tabItem {
-                    Image(systemName: "gear")
-                    Text("設定")
+                    Image(systemName: "gearshape.fill")
+                    Text("設置")
                 }
+                .tag(2)
         }
+        .accentColor(.blue)
     }
 }
 

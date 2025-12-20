@@ -8,13 +8,15 @@ struct ReloadWidgetIntent: AppIntent {
     
     func perform() async throws -> some IntentResult {
         // 強制清除緩存並重新讀取數據
-        UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.synchronize()
+        if let defaults = UserDefaults(suiteName: "group.xfw.Vitamin-Manager") {
+            defaults.synchronize()
+        }
         
         // 重新載入所有 Widget 時間線
         WidgetCenter.shared.reloadAllTimelines()
         
         // 添加延遲確保數據同步
-        try await Task.sleep(nanoseconds: 500_000_000) // 0.5 秒
+        try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 秒
         
         return .result()
     }
