@@ -24,62 +24,42 @@ struct ReloadWidgetIntent: AppIntent {
 struct VitaminWidgetEntry: TimelineEntry {
     let date: Date
     let lastAction: String?
-    let lastActionTime: Date?
     let todayProgress: Double
 }
 
 // 3. 時間線提供者
 struct Provider: TimelineProvider {
-    private let suiteName = "group.xfw.Vitamin-Manager"
-    
     func placeholder(in context: Context) -> VitaminWidgetEntry {
-        VitaminWidgetEntry(
-            date: Date(),
-            lastAction: "維他命管家",
-            lastActionTime: nil,
-            todayProgress: 0.0
-        )
+        VitaminWidgetEntry(date: Date(), lastAction: "準備中...", todayProgress: 0)
     }
     
     func getSnapshot(in context: Context, completion: @escaping (VitaminWidgetEntry) -> ()) {
-        let entry = createEntry()
+        let entry = VitaminWidgetEntry(date: Date(), lastAction: loadLast(), todayProgress: loadProgress())
         completion(entry)
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<VitaminWidgetEntry>) -> ()) {
-        let entry = createEntry()
-        
-        // 設定較短的刷新間隔以保持數據同步
-        let nextUpdate = Calendar.current.date(byAdding: .minute, value: 15, to: Date()) ?? Date()
-        let timeline = Timeline(entries: [entry], policy: .after(nextUpdate))
-        
+        let entry = VitaminWidgetEntry(date: Date(), lastAction: loadLast(), todayProgress: loadProgress())
+        // 設定 .never，依賴主 App 吃藥時觸發更新
+        let timeline = Timeline(entries: [entry], policy: .never)
         completion(timeline)
     }
     
-    // 安全的數據讀取方法
-    private func createEntry() -> VitaminWidgetEntry {
-        guard let defaults = UserDefaults(suiteName: suiteName) else {
-            print("❌ Widget 無法建立 UserDefaults 連接")
-            return VitaminWidgetEntry(
-                date: Date(),
-                lastAction: "無法連接",
-                lastActionTime: nil,
-                todayProgress: 0.0
-            )
+    // 讀取 App Group 資料 (確保 ID 正確)
+    func loadLast() -> String? {
+        UserDefaults(suiteName: "group.xfw.Vitamin-Manager")?.string(forKey: "lastAction")
+    }
+    func loadProgress() -> Double {
+        do {
+            guard let defaults = UserDefaults(suiteName: "group.xfw.Vitamin-Manager") else {
+                print("⚠️ 無法建立 UserDefaults 連接 (進度)")
+                return 0
+            }
+            return defaults.double(forKey: "todayProgress")
+        } catch {
+            print("❌ 讀取 todayProgress 失敗: \(error.localizedDescription)")
+            return 0
         }
-        
-        let lastAction = defaults.string(forKey: "lastAction")
-        let lastActionTime = defaults.object(forKey: "lastActionTime") as? Date
-        let todayProgress = defaults.double(forKey: "todayProgress")
-        
-        print("📱 Widget 讀取數據: \(lastAction ?? "無"), 進度: \(todayProgress)")
-        
-        return VitaminWidgetEntry(
-            date: Date(),
-            lastAction: lastAction,
-            lastActionTime: lastActionTime,
-            todayProgress: todayProgress
-        )
     }
 }
 

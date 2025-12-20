@@ -1,803 +1,808 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 77;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        373D86BA2EE56020001A460C /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 373D86B92EE56020001A460C /* SwiftDate */; };
-        374BCD512EE5819500648185 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BCD502EE5819500648185 /* WidgetKit.framework */; };
-        374BCD532EE5819500648185 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BCD522EE5819500648185 /* SwiftUI.framework */; };
-        374BCD642EE5819600648185 /* VitaminWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		373D86BA2EE56020001A460C /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 373D86B92EE56020001A460C /* SwiftDate */; };
+		374BCD512EE5819500648185 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BCD502EE5819500648185 /* WidgetKit.framework */; };
+		374BCD532EE5819500648185 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374BCD522EE5819500648185 /* SwiftUI.framework */; };
+		374BCD642EE5819600648185 /* VitaminWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37B1D2152EF64F420071837A /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		37B1D2162EF64F420071837A /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 373D86B92EE56020001A460C /* SwiftDate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        373D869C2EE55EB7001A460C /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 373D86862EE55EB6001A460C /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 373D868D2EE55EB6001A460C;
-            remoteInfo = "Vitamin Manager";
-        };
-        373D86A62EE55EB7001A460C /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 373D86862EE55EB6001A460C /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 373D868D2EE55EB6001A460C;
-            remoteInfo = "Vitamin Manager";
-        };
-        374BCD622EE5819600648185 /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 373D86862EE55EB6001A460C /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 374BCD4D2EE5819500648185;
-            remoteInfo = VitaminWidgetExtension;
-        };
+		373D869C2EE55EB7001A460C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373D86862EE55EB6001A460C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373D868D2EE55EB6001A460C;
+			remoteInfo = "Vitamin Manager";
+		};
+		373D86A62EE55EB7001A460C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373D86862EE55EB6001A460C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 373D868D2EE55EB6001A460C;
+			remoteInfo = "Vitamin Manager";
+		};
+		374BCD622EE5819600648185 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 373D86862EE55EB6001A460C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 374BCD4D2EE5819500648185;
+			remoteInfo = VitaminWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-        374BCD652EE5819600648185 /* Embed Foundation Extensions */ = {
-            isa = PBXCopyFilesBuildPhase;
-            buildActionMask = 2147483647;
-            dstPath = "";
-            dstSubfolderSpec = 13;
-            files = (
-                374BCD642EE5819600648185 /* VitaminWidgetExtension.appex in Embed Foundation Extensions */,
-            );
-            name = "Embed Foundation Extensions";
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		374BCD652EE5819600648185 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				374BCD642EE5819600648185 /* VitaminWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-        373D868E2EE55EB6001A460C /* Vitamin Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vitamin Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-        373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vitamin ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-        373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vitamin ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-        374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VitaminWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-        374BCD502EE5819500648185 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
-        374BCD522EE5819500648185 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-        374BCD6B2EE581E900648185 /* VitaminWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VitaminWidgetExtension.entitlements; sourceTree = "<group>"; };
+		373D868E2EE55EB6001A460C /* Vitamin Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vitamin Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vitamin ManagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Vitamin ManagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VitaminWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		374BCD502EE5819500648185 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		374BCD522EE5819500648185 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		374BCD6B2EE581E900648185 /* VitaminWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VitaminWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-        374BCD682EE5819600648185 /* Exceptions for "VitaminWidget" folder in "VitaminWidgetExtension" target */ = {
-            isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-            membershipExceptions = (
-                Info.plist,
-            );
-            target = 374BCD4D2EE5819500648185 /* VitaminWidgetExtension */;
-        };
+		374BCD682EE5819600648185 /* Exceptions for "VitaminWidget" folder in "VitaminWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 374BCD4D2EE5819500648185 /* VitaminWidgetExtension */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-        373D86902EE55EB6001A460C /* Vitamin Manager */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            path = "Vitamin Manager";
-            sourceTree = "<group>";
-        };
-        373D869E2EE55EB7001A460C /* Vitamin ManagerTests */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            path = "Vitamin ManagerTests";
-            sourceTree = "<group>";
-        };
-        373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            path = "Vitamin ManagerUITests";
-            sourceTree = "<group>";
-        };
-        374BCD542EE5819500648185 /* VitaminWidget */ = {
-            isa = PBXFileSystemSynchronizedRootGroup;
-            exceptions = (
-                374BCD682EE5819600648185 /* Exceptions for "VitaminWidget" folder in "VitaminWidgetExtension" target */,
-            );
-            path = VitaminWidget;
-            sourceTree = "<group>";
-        };
+		373D86902EE55EB6001A460C /* Vitamin Manager */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Vitamin Manager";
+			sourceTree = "<group>";
+		};
+		373D869E2EE55EB7001A460C /* Vitamin ManagerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Vitamin ManagerTests";
+			sourceTree = "<group>";
+		};
+		373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Vitamin ManagerUITests";
+			sourceTree = "<group>";
+		};
+		374BCD542EE5819500648185 /* VitaminWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				374BCD682EE5819600648185 /* Exceptions for "VitaminWidget" folder in "VitaminWidgetExtension" target */,
+			);
+			path = VitaminWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        373D868B2EE55EB6001A460C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                373D86BA2EE56020001A460C /* SwiftDate in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86982EE55EB7001A460C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86A22EE55EB7001A460C /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        374BCD4B2EE5819500648185 /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                374BCD532EE5819500648185 /* SwiftUI.framework in Frameworks */,
-                374BCD512EE5819500648185 /* WidgetKit.framework in Frameworks */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		373D868B2EE55EB6001A460C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B1D2162EF64F420071837A /* SwiftDate in Frameworks */,
+				37B1D2152EF64F420071837A /* (null) in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86982EE55EB7001A460C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86A22EE55EB7001A460C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374BCD4B2EE5819500648185 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				373D86BA2EE56020001A460C /* SwiftDate in Frameworks */,
+				374BCD532EE5819500648185 /* SwiftUI.framework in Frameworks */,
+				374BCD512EE5819500648185 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        373D86852EE55EB6001A460C = {
-            isa = PBXGroup;
-            children = (
-                374BCD6B2EE581E900648185 /* VitaminWidgetExtension.entitlements */,
-                373D86902EE55EB6001A460C /* Vitamin Manager */,
-                373D869E2EE55EB7001A460C /* Vitamin ManagerTests */,
-                373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */,
-                374BCD542EE5819500648185 /* VitaminWidget */,
-                374BCD4F2EE5819500648185 /* Frameworks */,
-                373D868F2EE55EB6001A460C /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        373D868F2EE55EB6001A460C /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                373D868E2EE55EB6001A460C /* Vitamin Manager.app */,
-                373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */,
-                373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */,
-                374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        374BCD4F2EE5819500648185 /* Frameworks */ = {
-            isa = PBXGroup;
-            children = (
-                374BCD502EE5819500648185 /* WidgetKit.framework */,
-                374BCD522EE5819500648185 /* SwiftUI.framework */,
-            );
-            name = Frameworks;
-            sourceTree = "<group>";
-        };
+		373D86852EE55EB6001A460C = {
+			isa = PBXGroup;
+			children = (
+				374BCD6B2EE581E900648185 /* VitaminWidgetExtension.entitlements */,
+				373D86902EE55EB6001A460C /* Vitamin Manager */,
+				373D869E2EE55EB7001A460C /* Vitamin ManagerTests */,
+				373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */,
+				374BCD542EE5819500648185 /* VitaminWidget */,
+				374BCD4F2EE5819500648185 /* Frameworks */,
+				373D868F2EE55EB6001A460C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		373D868F2EE55EB6001A460C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				373D868E2EE55EB6001A460C /* Vitamin Manager.app */,
+				373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */,
+				373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */,
+				374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		374BCD4F2EE5819500648185 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				374BCD502EE5819500648185 /* WidgetKit.framework */,
+				374BCD522EE5819500648185 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        373D868D2EE55EB6001A460C /* Vitamin Manager */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 373D86AF2EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin Manager" */;
-            buildPhases = (
-                373D868A2EE55EB6001A460C /* Sources */,
-                373D868B2EE55EB6001A460C /* Frameworks */,
-                373D868C2EE55EB6001A460C /* Resources */,
-                374BCD652EE5819600648185 /* Embed Foundation Extensions */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                374BCD632EE5819600648185 /* PBXTargetDependency */,
-            );
-            fileSystemSynchronizedGroups = (
-                373D86902EE55EB6001A460C /* Vitamin Manager */,
-            );
-            name = "Vitamin Manager";
-            packageProductDependencies = (
-                373D86B92EE56020001A460C /* SwiftDate */,
-            );
-            productName = "Vitamin Manager";
-            productReference = 373D868E2EE55EB6001A460C /* Vitamin Manager.app */;
-            productType = "com.apple.product-type.application";
-        };
-        373D869A2EE55EB7001A460C /* Vitamin ManagerTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 373D86B22EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerTests" */;
-            buildPhases = (
-                373D86972EE55EB7001A460C /* Sources */,
-                373D86982EE55EB7001A460C /* Frameworks */,
-                373D86992EE55EB7001A460C /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                373D869D2EE55EB7001A460C /* PBXTargetDependency */,
-            );
-            fileSystemSynchronizedGroups = (
-                373D869E2EE55EB7001A460C /* Vitamin ManagerTests */,
-            );
-            name = "Vitamin ManagerTests";
-            packageProductDependencies = (
-            );
-            productName = "Vitamin ManagerTests";
-            productReference = 373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        373D86A42EE55EB7001A460C /* Vitamin ManagerUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 373D86B52EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerUITests" */;
-            buildPhases = (
-                373D86A12EE55EB7001A460C /* Sources */,
-                373D86A22EE55EB7001A460C /* Frameworks */,
-                373D86A32EE55EB7001A460C /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                373D86A72EE55EB7001A460C /* PBXTargetDependency */,
-            );
-            fileSystemSynchronizedGroups = (
-                373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */,
-            );
-            name = "Vitamin ManagerUITests";
-            packageProductDependencies = (
-            );
-            productName = "Vitamin ManagerUITests";
-            productReference = 373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
-        374BCD4D2EE5819500648185 /* VitaminWidgetExtension */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 374BCD692EE5819600648185 /* Build configuration list for PBXNativeTarget "VitaminWidgetExtension" */;
-            buildPhases = (
-                374BCD4A2EE5819500648185 /* Sources */,
-                374BCD4B2EE5819500648185 /* Frameworks */,
-                374BCD4C2EE5819500648185 /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            fileSystemSynchronizedGroups = (
-                374BCD542EE5819500648185 /* VitaminWidget */,
-            );
-            name = VitaminWidgetExtension;
-            packageProductDependencies = (
-            );
-            productName = VitaminWidgetExtension;
-            productReference = 374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */;
-            productType = "com.apple.product-type.app-extension";
-        };
+		373D868D2EE55EB6001A460C /* Vitamin Manager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373D86AF2EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin Manager" */;
+			buildPhases = (
+				373D868A2EE55EB6001A460C /* Sources */,
+				373D868B2EE55EB6001A460C /* Frameworks */,
+				373D868C2EE55EB6001A460C /* Resources */,
+				374BCD652EE5819600648185 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				374BCD632EE5819600648185 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				373D86902EE55EB6001A460C /* Vitamin Manager */,
+			);
+			name = "Vitamin Manager";
+			packageProductDependencies = (
+				373D86B92EE56020001A460C /* SwiftDate */,
+			);
+			productName = "Vitamin Manager";
+			productReference = 373D868E2EE55EB6001A460C /* Vitamin Manager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		373D869A2EE55EB7001A460C /* Vitamin ManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373D86B22EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerTests" */;
+			buildPhases = (
+				373D86972EE55EB7001A460C /* Sources */,
+				373D86982EE55EB7001A460C /* Frameworks */,
+				373D86992EE55EB7001A460C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373D869D2EE55EB7001A460C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				373D869E2EE55EB7001A460C /* Vitamin ManagerTests */,
+			);
+			name = "Vitamin ManagerTests";
+			packageProductDependencies = (
+			);
+			productName = "Vitamin ManagerTests";
+			productReference = 373D869B2EE55EB7001A460C /* Vitamin ManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		373D86A42EE55EB7001A460C /* Vitamin ManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 373D86B52EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerUITests" */;
+			buildPhases = (
+				373D86A12EE55EB7001A460C /* Sources */,
+				373D86A22EE55EB7001A460C /* Frameworks */,
+				373D86A32EE55EB7001A460C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				373D86A72EE55EB7001A460C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				373D86A82EE55EB7001A460C /* Vitamin ManagerUITests */,
+			);
+			name = "Vitamin ManagerUITests";
+			packageProductDependencies = (
+			);
+			productName = "Vitamin ManagerUITests";
+			productReference = 373D86A52EE55EB7001A460C /* Vitamin ManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		374BCD4D2EE5819500648185 /* VitaminWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 374BCD692EE5819600648185 /* Build configuration list for PBXNativeTarget "VitaminWidgetExtension" */;
+			buildPhases = (
+				374BCD4A2EE5819500648185 /* Sources */,
+				374BCD4B2EE5819500648185 /* Frameworks */,
+				374BCD4C2EE5819500648185 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				374BCD542EE5819500648185 /* VitaminWidget */,
+			);
+			name = VitaminWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = VitaminWidgetExtension;
+			productReference = 374BCD4E2EE5819500648185 /* VitaminWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        373D86862EE55EB6001A460C /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                BuildIndependentTargetsInParallel = 1;
-                LastSwiftUpdateCheck = 2600;
-                LastUpgradeCheck = 2600;
-                TargetAttributes = {
-                    373D868D2EE55EB6001A460C = {
-                        CreatedOnToolsVersion = 26.0.1;
-                    };
-                    373D869A2EE55EB7001A460C = {
-                        CreatedOnToolsVersion = 26.0.1;
-                        TestTargetID = 373D868D2EE55EB6001A460C;
-                    };
-                    373D86A42EE55EB7001A460C = {
-                        CreatedOnToolsVersion = 26.0.1;
-                        TestTargetID = 373D868D2EE55EB6001A460C;
-                    };
-                    374BCD4D2EE5819500648185 = {
-                        CreatedOnToolsVersion = 26.0.1;
-                    };
-                };
-            };
-            buildConfigurationList = 373D86892EE55EB6001A460C /* Build configuration list for PBXProject "Vitamin Manager" */;
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 373D86852EE55EB6001A460C;
-            minimizedProjectReferenceProxies = 1;
-            packageReferences = (
-                373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */,
-            );
-            preferredProjectObjectVersion = 77;
-            productRefGroup = 373D868F2EE55EB6001A460C /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                373D868D2EE55EB6001A460C /* Vitamin Manager */,
-                373D869A2EE55EB7001A460C /* Vitamin ManagerTests */,
-                373D86A42EE55EB7001A460C /* Vitamin ManagerUITests */,
-                374BCD4D2EE5819500648185 /* VitaminWidgetExtension */,
-            );
-        };
+		373D86862EE55EB6001A460C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					373D868D2EE55EB6001A460C = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+					373D869A2EE55EB7001A460C = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 373D868D2EE55EB6001A460C;
+					};
+					373D86A42EE55EB7001A460C = {
+						CreatedOnToolsVersion = 26.0.1;
+						TestTargetID = 373D868D2EE55EB6001A460C;
+					};
+					374BCD4D2EE5819500648185 = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 373D86892EE55EB6001A460C /* Build configuration list for PBXProject "Vitamin Manager" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 373D86852EE55EB6001A460C;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 373D868F2EE55EB6001A460C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				373D868D2EE55EB6001A460C /* Vitamin Manager */,
+				373D869A2EE55EB7001A460C /* Vitamin ManagerTests */,
+				373D86A42EE55EB7001A460C /* Vitamin ManagerUITests */,
+				374BCD4D2EE5819500648185 /* VitaminWidgetExtension */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        373D868C2EE55EB6001A460C /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86992EE55EB7001A460C /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86A32EE55EB7001A460C /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        374BCD4C2EE5819500648185 /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		373D868C2EE55EB6001A460C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86992EE55EB7001A460C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86A32EE55EB7001A460C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374BCD4C2EE5819500648185 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        373D868A2EE55EB6001A460C /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86972EE55EB7001A460C /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        373D86A12EE55EB7001A460C /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        374BCD4A2EE5819500648185 /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		373D868A2EE55EB6001A460C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86972EE55EB7001A460C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		373D86A12EE55EB7001A460C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		374BCD4A2EE5819500648185 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        373D869D2EE55EB7001A460C /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 373D868D2EE55EB6001A460C /* Vitamin Manager */;
-            targetProxy = 373D869C2EE55EB7001A460C /* PBXContainerItemProxy */;
-        };
-        373D86A72EE55EB7001A460C /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 373D868D2EE55EB6001A460C /* Vitamin Manager */;
-            targetProxy = 373D86A62EE55EB7001A460C /* PBXContainerItemProxy */;
-        };
-        374BCD632EE5819600648185 /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 374BCD4D2EE5819500648185 /* VitaminWidgetExtension */;
-            targetProxy = 374BCD622EE5819600648185 /* PBXContainerItemProxy */;
-        };
+		373D869D2EE55EB7001A460C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373D868D2EE55EB6001A460C /* Vitamin Manager */;
+			targetProxy = 373D869C2EE55EB7001A460C /* PBXContainerItemProxy */;
+		};
+		373D86A72EE55EB7001A460C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 373D868D2EE55EB6001A460C /* Vitamin Manager */;
+			targetProxy = 373D86A62EE55EB7001A460C /* PBXContainerItemProxy */;
+		};
+		374BCD632EE5819600648185 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 374BCD4D2EE5819500648185 /* VitaminWidgetExtension */;
+			targetProxy = 374BCD622EE5819600648185 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-        373D86AD2EE55EB7001A460C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                ENABLE_USER_SCRIPT_SANDBOXING = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu17;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-                LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-                MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-                MTL_FAST_MATH = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        373D86AE2EE55EB7001A460C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_ENABLE_OBJC_WEAK = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_USER_SCRIPT_SANDBOXING = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu17;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-                LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                MTL_FAST_MATH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_COMPILATION_MODE = wholemodule;
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        373D86B02EE55EB7001A460C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                CODE_SIGN_ENTITLEMENTS = "Vitamin Manager/Vitamin Manager.entitlements";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                ENABLE_PREVIEWS = YES;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = "Vitamin-Manager-Info.plist";
-                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-                INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        373D86B12EE55EB7001A460C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
-                CODE_SIGN_ENTITLEMENTS = "Vitamin Manager/Vitamin Manager.entitlements";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                ENABLE_PREVIEWS = YES;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = "Vitamin-Manager-Info.plist";
-                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-                INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-                INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        373D86B32EE55EB7001A460C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerTests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = NO;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitamin Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitamin Manager";
-            };
-            name = Debug;
-        };
-        373D86B42EE55EB7001A460C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 26.0;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerTests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = NO;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitamin Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitamin Manager";
-            };
-            name = Release;
-        };
-        373D86B62EE55EB7001A460C /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerUITests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = NO;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = "Vitamin Manager";
-            };
-            name = Debug;
-        };
-        373D86B72EE55EB7001A460C /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerUITests";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                STRING_CATALOG_GENERATE_SYMBOLS = NO;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = NO;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = "Vitamin Manager";
-            };
-            name = Release;
-        };
-        374BCD662EE5819600648185 /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-                CODE_SIGN_ENTITLEMENTS = VitaminWidgetExtension.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = VitaminWidget/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = VitaminWidget;
-                INFOPLIST_KEY_NSHumanReadableCopyright = "";
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@executable_path/../../Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager.VitaminWidget2025";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SKIP_INSTALL = YES;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        374BCD672EE5819600648185 /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-                ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-                CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
-                CODE_SIGN_ENTITLEMENTS = VitaminWidgetExtension.entitlements;
-                CODE_SIGN_STYLE = Automatic;
-                CURRENT_PROJECT_VERSION = 1;
-                DEVELOPMENT_TEAM = 77GUV2264S;
-                GENERATE_INFOPLIST_FILE = YES;
-                INFOPLIST_FILE = VitaminWidget/Info.plist;
-                INFOPLIST_KEY_CFBundleDisplayName = VitaminWidget;
-                INFOPLIST_KEY_NSHumanReadableCopyright = "";
-                LD_RUNPATH_SEARCH_PATHS = (
-                    "$(inherited)",
-                    "@executable_path/Frameworks",
-                    "@executable_path/../../Frameworks",
-                );
-                MARKETING_VERSION = 1.0;
-                PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager.VitaminWidget2025";
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SKIP_INSTALL = YES;
-                STRING_CATALOG_GENERATE_SYMBOLS = YES;
-                SWIFT_APPROACHABLE_CONCURRENCY = YES;
-                SWIFT_EMIT_LOC_STRINGS = YES;
-                SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-                SWIFT_VERSION = 5.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
+		373D86AD2EE55EB7001A460C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		373D86AE2EE55EB7001A460C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		373D86B02EE55EB7001A460C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Vitamin Manager/Vitamin Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vitamin-Manager-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		373D86B12EE55EB7001A460C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = "Vitamin Manager/Vitamin Manager.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Vitamin-Manager-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		373D86B32EE55EB7001A460C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitamin Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitamin Manager";
+			};
+			name = Debug;
+		};
+		373D86B42EE55EB7001A460C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vitamin Manager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Vitamin Manager";
+			};
+			name = Release;
+		};
+		373D86B62EE55EB7001A460C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vitamin Manager";
+			};
+			name = Debug;
+		};
+		373D86B72EE55EB7001A460C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-ManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Vitamin Manager";
+			};
+			name = Release;
+		};
+		374BCD662EE5819600648185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = VitaminWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VitaminWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VitaminWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager.VitaminWidget2025";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		374BCD672EE5819600648185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = VitaminWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 77GUV2264S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VitaminWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VitaminWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "xfw.Vitamin-Manager.VitaminWidget2025";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        373D86892EE55EB6001A460C /* Build configuration list for PBXProject "Vitamin Manager" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                373D86AD2EE55EB7001A460C /* Debug */,
-                373D86AE2EE55EB7001A460C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        373D86AF2EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin Manager" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                373D86B02EE55EB7001A460C /* Debug */,
-                373D86B12EE55EB7001A460C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        373D86B22EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                373D86B32EE55EB7001A460C /* Debug */,
-                373D86B42EE55EB7001A460C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        373D86B52EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                373D86B62EE55EB7001A460C /* Debug */,
-                373D86B72EE55EB7001A460C /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        374BCD692EE5819600648185 /* Build configuration list for PBXNativeTarget "VitaminWidgetExtension" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                374BCD662EE5819600648185 /* Debug */,
-                374BCD672EE5819600648185 /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		373D86892EE55EB6001A460C /* Build configuration list for PBXProject "Vitamin Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373D86AD2EE55EB7001A460C /* Debug */,
+				373D86AE2EE55EB7001A460C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373D86AF2EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin Manager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373D86B02EE55EB7001A460C /* Debug */,
+				373D86B12EE55EB7001A460C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373D86B22EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373D86B32EE55EB7001A460C /* Debug */,
+				373D86B42EE55EB7001A460C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		373D86B52EE55EB7001A460C /* Build configuration list for PBXNativeTarget "Vitamin ManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				373D86B62EE55EB7001A460C /* Debug */,
+				373D86B72EE55EB7001A460C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		374BCD692EE5819600648185 /* Build configuration list for PBXNativeTarget "VitaminWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374BCD662EE5819600648185 /* Debug */,
+				374BCD672EE5819600648185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-        373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-            isa = XCRemoteSwiftPackageReference;
-            repositoryURL = "https://github.com/malcommac/SwiftDate";
-            requirement = {
-                kind = upToNextMajorVersion;
-                minimumVersion = 7.0.0;
-            };
-        };
+		373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-        373D86B92EE56020001A460C /* SwiftDate */ = {
-            isa = XCSwiftPackageProductDependency;
-            package = 373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */;
-            productName = SwiftDate;
-        };
+		373D86B92EE56020001A460C /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 373D86B82EE56020001A460C /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
 /* End XCSwiftPackageProductDependency section */
-    };
-    rootObject = 373D86862EE55EB6001A460C /* Project object */;
+	};
+	rootObject = 373D86862EE55EB6001A460C /* Project object */;
 }
