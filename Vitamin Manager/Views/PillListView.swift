@@ -148,8 +148,10 @@ struct PillListView: View {
             .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "搜尋藥物或分類")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showAddSheet = true }) {
-                        Image(systemName: "plus.circle.fill").font(.title2)
+                    HStack(spacing: 12) {
+                        Button(action: { showAddSheet = true }) {
+                            Image(systemName: "plus.circle.fill").font(.title2)
+                        }
                     }
                 }
             }
