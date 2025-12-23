@@ -2,6 +2,23 @@ import WidgetKit
 import SwiftUI
 import AppIntents
 
+extension Color {
+    init(hex: String) {
+        var hexString = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        if hexString.hasPrefix("#") { hexString.removeFirst() }
+        var int: UInt64 = 0
+        Scanner(string: hexString).scanHexInt64(&int)
+        let r, g, b, a: UInt64
+        switch hexString.count {
+        case 8: (r, g, b, a) = ((int >> 24) & 0xff, (int >> 16) & 0xff, (int >> 8) & 0xff, int & 0xff)
+        case 6: (r, g, b, a) = ((int >> 16) & 0xff, (int >> 8) & 0xff, int & 0xff, 0xff)
+        case 3: (r, g, b, a) = (((int >> 8) & 0xf) * 17, ((int >> 4) & 0xf) * 17, (int & 0xf) * 17, 0xff)
+        default: (r, g, b, a) = (0, 0, 0, 0xff)
+        }
+        self.init(.sRGB, red: Double(r) / 255, green: Double(g) / 255, blue: Double(b) / 255, opacity: Double(a) / 255)
+    }
+}
+
 // 1. 刷新按鈕動作
 struct ReloadWidgetIntent: AppIntent {
     static var title: LocalizedStringResource = "重新整理"
@@ -96,7 +113,7 @@ struct VitaminWidgetEntryView : View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
                 HStack {
-                    Image(systemName: "pills.fill").foregroundStyle(.blue)
+                    Image(systemName: "pills.fill").foregroundStyle(Color(hex: "#66AD89"))
                     Text("維他命管家").font(.caption2).bold().foregroundStyle(.secondary)
                 }
                 
@@ -133,7 +150,7 @@ struct VitaminWidgetEntryView : View {
                     Circle().stroke(Color.gray.opacity(0.2), lineWidth: 5)
                     Circle().trim(from: 0, to: CGFloat(entry.todayProgress))
                         .stroke(
-                            LinearGradient(colors: [.blue, .cyan], startPoint: .top, endPoint: .bottom),
+                            LinearGradient(colors: [Color(hex: "#66AD89"), Color(hex: "#66AD89").opacity(0.7)], startPoint: .top, endPoint: .bottom),
                             style: StrokeStyle(lineWidth: 5, lineCap: .round)
                         )
                         .rotationEffect(.degrees(-90))
@@ -177,3 +194,4 @@ struct VitaminWidget: Widget {
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
+

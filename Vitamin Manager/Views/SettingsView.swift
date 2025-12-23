@@ -25,7 +25,7 @@ struct SettingsView: View {
                     HStack {
                         Spacer()
                         VStack(spacing: 4) {
-                            Image(systemName: "pills.circle.fill").font(.largeTitle).foregroundStyle(.blue.opacity(0.5))
+                            Image(systemName: "pills.circle.fill").font(.largeTitle).foregroundStyle(Color(hex: "#66AD89").opacity(0.5))
                             Text("維他命管家 v1.0.0").font(.caption).bold()
                             Text("Designed by Allison").font(.caption2).foregroundStyle(.secondary)
                         }
@@ -72,3 +72,4 @@ struct SettingsView: View {
         WidgetCenter.shared.reloadAllTimelines()
     }
 }
+
