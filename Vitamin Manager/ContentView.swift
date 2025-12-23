@@ -27,6 +27,7 @@ struct ContentView: View {
             }
         }
         .onAppear { shouldShowWelcome = true }
+        .tint(Color(hex: "#66AD89"))
         .fullScreenCover(isPresented: $shouldShowWelcome) {
             WelcomeView(onContinue: { shouldShowWelcome = false })
         }

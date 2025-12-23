@@ -64,7 +64,19 @@ struct PillListView: View {
                 Color(uiColor: .systemGroupedBackground).ignoresSafeArea()
 
                 if pills.isEmpty {
-                    ContentUnavailableView("藥盒是空的", systemImage: "pills.circle", description: Text("點擊右上角 + 新增"))
+                    VStack(spacing: 8) {
+                        Image(systemName: "pills.circle")
+                            .symbolRenderingMode(.monochrome)
+                            .foregroundStyle(Color(red: 0.4, green: 0.678, blue: 0.537)) // #66AD89
+                            .font(.system(size: 48, weight: .regular))
+                        Text("藥盒是空的")
+                            .font(.headline)
+                            .foregroundStyle(.primary)
+                        Text("點擊右上角 + 新增")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
                 } else {
                     List {
                         Section {
