@@ -154,9 +154,10 @@ struct AddPillView: View {
                 ToolbarItem(placement: .cancellationAction) { Button("取消") { dismiss() } }
                 ToolbarItem(placement: .confirmationAction) {
                     Button("儲存") {
+                        let trimmedCategory = category.trimmingCharacters(in: .whitespacesAndNewlines)
                         let newPill = VitaminItem(
                             name: name,
-                            category: category,
+                            category: trimmedCategory,
                             photoData: selectedImageData,
                             quantity: quantity,
                             colorHex: selectedColorHex,
@@ -168,7 +169,7 @@ struct AddPillView: View {
                         
                         do {
                             try context.save()
-                            print("[AddPillView] 儲存成功，name=\(newPill.name)")
+                            print("[AddPillView] 儲存成功，name=\(newPill.name), category=\(newPill.category)")
                         } catch {
                             print("儲存新藥物失敗: \(error)")
                         }
@@ -351,7 +352,7 @@ struct EditPillView: View {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("儲存") {
                         pill.name = name
-                        pill.category = category
+                        pill.category = category.trimmingCharacters(in: .whitespacesAndNewlines)
                         pill.photoData = selectedImageData
                         pill.quantity = quantity
                         pill.colorHex = selectedColorHex
@@ -361,7 +362,7 @@ struct EditPillView: View {
                         
                         do {
                             try context.save()
-                            print("[EditPillView] 儲存成功，name=\(pill.name)")
+                            print("[EditPillView] 儲存成功，name=\(pill.name), category=\(pill.category)")
                         } catch {
                             print("儲存編輯藥物失敗: \(error)")
                         }

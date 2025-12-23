@@ -43,10 +43,12 @@ struct StatsView: View {
     
     // 分類統計數據
     var categoryStats: [CategoryStat] {
+        // 固定顯示的分類清單
         let categories = ["維他命", "礦物質", "保健食品", "處方藥", "中藥", "一般"]
         
         return categories.compactMap { category in
-            let categoryPills = pills.filter { $0.category == category }
+            // 以修剪空白後的字串進行比對，避免使用者輸入空白造成錯誤分類
+            let categoryPills = pills.filter { $0.category.trimmingCharacters(in: .whitespacesAndNewlines) == category }
             guard !categoryPills.isEmpty else { return nil }
             
             let todayTaken = categoryPills.filter { pill in
@@ -59,7 +61,6 @@ struct StatsView: View {
                 .mapValues { $0.count }
             let mostCommonColorHex = colorCounts.max { $0.value < $1.value }?.key ?? "blue"
             
-            // 創建一個臨時的VitaminItem來取得顏色
             let tempPill = VitaminItem(name: "", colorHex: mostCommonColorHex)
             let categoryColor = tempPill.color
             

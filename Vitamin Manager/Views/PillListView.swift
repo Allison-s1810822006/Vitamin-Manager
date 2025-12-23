@@ -3,12 +3,60 @@ import SwiftData
 import SwiftDate
 import WidgetKit
 
+// 篩選選項
+private enum PillFilter: String, CaseIterable, Identifiable {
+    case all = "全部"
+    case incomplete = "未服用"
+    case completed = "已服用"
+    var id: Self { self }
+}
+
 // MARK: - 我的藥盒頁面
 struct PillListView: View {
     @Query(sort: \VitaminItem.name) private var pills: [VitaminItem]
     @Environment(\.modelContext) private var context
     @State private var showAddSheet = false
     @State private var editingPill: VitaminItem? = nil
+    @State private var selectedFilter: PillFilter = .all
+    @State private var searchText: String = ""
+
+    // 依今天是否已服用分組
+    private var incompleteToday: [VitaminItem] {
+        return pills.filter { pill in
+            guard let last = pill.lastTakenDate else { return true }
+            return !DateInRegion(last, region: .current).isToday
+        }
+    }
+    
+    private var completedToday: [VitaminItem] {
+        return pills.filter { pill in
+            guard let last = pill.lastTakenDate else { return false }
+            return DateInRegion(last, region: .current).isToday
+        }
+    }
+    
+    private var filteredPills: [VitaminItem] {
+        switch selectedFilter {
+        case .all:
+            return pills
+        case .incomplete:
+            return incompleteToday
+        case .completed:
+            return completedToday
+        }
+    }
+    
+    // 依搜尋字串再次過濾
+    private var searchedPills: [VitaminItem] {
+        let base = filteredPills
+        let keyword = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !keyword.isEmpty else { return base }
+        return base.filter { pill in
+            pill.name.localizedCaseInsensitiveContains(keyword)
+            || pill.category.localizedCaseInsensitiveContains(keyword)
+            || pill.medicationTime.localizedCaseInsensitiveContains(keyword)
+        }
+    }
 
     var body: some View {
         NavigationStack {
@@ -19,22 +67,73 @@ struct PillListView: View {
                     ContentUnavailableView("藥盒是空的", systemImage: "pills.circle", description: Text("點擊右上角 + 新增"))
                 } else {
                     List {
-                        ForEach(pills) { pill in
-                            PillRowView(pill: pill, onTake: { takePill(pill) })
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    editingPill = pill
+                        Section {
+                            EmptyView()
+                        } header: {
+                            Picker("篩選", selection: $selectedFilter) {
+                                ForEach(PillFilter.allCases) { option in
+                                    Text(option.rawValue).tag(option)
                                 }
-                                .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
-                                .listRowBackground(Color.clear)
-                                .listRowSeparator(.hidden)
+                            }
+                            .pickerStyle(.segmented)
+                            .padding(.horizontal)
+                            .padding(.top, 8)
                         }
-                        .onDelete(perform: deleteItems)
+                        
+                        if selectedFilter == .all {
+                            if !incompleteToday.isEmpty {
+                                Section(header: Text("未完成")) {
+                                    ForEach(searchText.isEmpty ? incompleteToday : incompleteToday.filter { pill in
+                                        let keyword = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+                                        return pill.name.localizedCaseInsensitiveContains(keyword)
+                                            || pill.category.localizedCaseInsensitiveContains(keyword)
+                                            || pill.medicationTime.localizedCaseInsensitiveContains(keyword)
+                                    }) { pill in
+                                        PillRowView(pill: pill, onTake: { takePill(pill) })
+                                            .contentShape(Rectangle())
+                                            .onTapGesture { editingPill = pill }
+                                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                                            .listRowBackground(Color.clear)
+                                            .listRowSeparator(.hidden)
+                                    }
+                                    .onDelete(perform: deleteItems)
+                                }
+                            }
+                            if !completedToday.isEmpty {
+                                Section(header: Text("已完成")) {
+                                    ForEach(searchText.isEmpty ? completedToday : completedToday.filter { pill in
+                                        let keyword = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+                                        return pill.name.localizedCaseInsensitiveContains(keyword)
+                                            || pill.category.localizedCaseInsensitiveContains(keyword)
+                                            || pill.medicationTime.localizedCaseInsensitiveContains(keyword)
+                                    }) { pill in
+                                        PillRowView(pill: pill, onTake: { takePill(pill) })
+                                            .contentShape(Rectangle())
+                                            .onTapGesture { editingPill = pill }
+                                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                                            .listRowBackground(Color.clear)
+                                            .listRowSeparator(.hidden)
+                                    }
+                                    .onDelete(perform: deleteItems)
+                                }
+                            }
+                        } else {
+                            ForEach(searchedPills) { pill in
+                                PillRowView(pill: pill, onTake: { takePill(pill) })
+                                    .contentShape(Rectangle())
+                                    .onTapGesture { editingPill = pill }
+                                    .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
+                                    .listRowBackground(Color.clear)
+                                    .listRowSeparator(.hidden)
+                            }
+                            .onDelete(perform: deleteItems)
+                        }
                     }
                     .listStyle(.plain)
                 }
             }
             .navigationTitle("我的藥盒")
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "搜尋藥物或分類")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: { showAddSheet = true }) {
@@ -84,3 +183,4 @@ struct PillListView: View {
         }
     }
 }
+
