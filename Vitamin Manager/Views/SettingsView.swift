@@ -15,7 +15,7 @@ struct SettingsView: View {
             Form {
                 Section("資料管理") {
                     Button(action: { clearAllData() }) {
-                        Label { Text("清除所有資料") } icon: {
+                        Label { Text("清除所有資料").foregroundStyle(.black) } icon: {
                             Image(systemName: "trash.fill").foregroundStyle(.red)
                         }
                     }
@@ -25,7 +25,7 @@ struct SettingsView: View {
                     HStack {
                         Spacer()
                         VStack(spacing: 4) {
-                            Image(systemName: "pills.circle.fill").font(.largeTitle).foregroundStyle(Color(hex: "#66AD89").opacity(0.5))
+                            Image(systemName: "pills.circle.fill").font(.largeTitle).foregroundStyle(AppColor.green.opacity(0.5))
                             Text("維他命管家 v1.0.0").font(.caption).bold()
                             Text("Designed by Allison").font(.caption2).foregroundStyle(.secondary)
                         }

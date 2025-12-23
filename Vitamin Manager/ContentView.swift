@@ -25,11 +25,14 @@ struct ContentView: View {
                         Text("設定")
                     }
             }
+            .tint(Color(hex: "#66AD89"))
         }
         .onAppear { shouldShowWelcome = true }
-        .tint(Color(hex: "#66AD89"))
         .fullScreenCover(isPresented: $shouldShowWelcome) {
-            WelcomeView(onContinue: { shouldShowWelcome = false })
+            ZStack {
+                WelcomeView(onContinue: { shouldShowWelcome = false })
+            }
+            .tint(.black)
         }
     }
 }

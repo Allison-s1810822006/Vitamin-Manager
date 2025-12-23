@@ -103,7 +103,7 @@ struct AddPillView: View {
                 Section {
                     Toggle(isOn: $enableReminder) {
                         Label { Text("啟用每日提醒") } icon: {
-                            Image(systemName: "bell.fill").foregroundStyle(.orange)
+                            Image(systemName: "bell.fill").foregroundStyle(Color(hex: "#66AD89"))
                         }
                     }
                     
@@ -117,7 +117,7 @@ struct AddPillView: View {
                                         .foregroundStyle(.secondary)
                                 }
                             } icon: {
-                                Image(systemName: "clock.fill").foregroundStyle(.blue)
+                                Image(systemName: "clock.fill").foregroundStyle(Color(hex: "#66AD89"))
                             }
                         }
                     }
@@ -133,7 +133,7 @@ struct AddPillView: View {
                                     Image(uiImage: uiImage).resizable().scaledToFill().frame(width: 180, height: 180).clipShape(RoundedRectangle(cornerRadius: 20)).shadow(radius: 5)
                                 } else {
                                     VStack(spacing: 10) {
-                                        Image(systemName: "camera.circle.fill").font(.system(size: 50)).foregroundStyle(.blue)
+                                        Image(systemName: "camera.circle.fill").font(.system(size: 50)).foregroundStyle(Color(hex: "#66AD89"))
                                         Text("點擊選擇照片").font(.caption).foregroundStyle(.secondary)
                                     }.frame(width: 180, height: 180).background(Color.gray.opacity(0.1)).clipShape(RoundedRectangle(cornerRadius: 20)).overlay(RoundedRectangle(cornerRadius: 20).stroke(style: StrokeStyle(lineWidth: 2, dash: [5])).foregroundStyle(.gray.opacity(0.3)))
                                 }
@@ -163,7 +163,8 @@ struct AddPillView: View {
                             colorHex: selectedColorHex,
                             medicationTime: medicationTime,
                             reminderTime: enableReminder ? reminderTime : nil,
-                            enableReminder: enableReminder
+                            enableReminder: enableReminder,
+                            updatedAt: Date()
                         )
                         context.insert(newPill)
                         
@@ -185,6 +186,7 @@ struct AddPillView: View {
                 }
             }
         }
+        .tint(.black)
         .sheet(isPresented: $showReminderTimePicker) {
             ReminderTimePickerView(reminderTime: $reminderTime, isPresented: $showReminderTimePicker)
         }
@@ -260,8 +262,8 @@ struct EditPillView: View {
                 // 4. 藥物顏色
                 Section {
                     HStack {
-                        let currentColor = colorOptions.first { $0.0 == selectedColorHex }?.1 ?? .blue
-                        let currentColorName = colorOptions.first { $0.0 == selectedColorHex }?.2 ?? "藍色"
+                        let currentColor = colorOptions.first { $0.0 == selectedColorHex }?.1 ?? Color(hex: "#66AD89")
+                        let currentColorName = colorOptions.first { $0.0 == selectedColorHex }?.2 ?? "綠色"
                         
                         Circle()
                             .fill(currentColor)
@@ -300,7 +302,7 @@ struct EditPillView: View {
                 Section {
                     Toggle(isOn: $enableReminder) {
                         Label { Text("啟用每日提醒") } icon: {
-                            Image(systemName: "bell.fill").foregroundStyle(.orange)
+                            Image(systemName: "bell.fill").foregroundStyle(Color(hex: "#66AD89"))
                         }
                     }
                     
@@ -314,7 +316,7 @@ struct EditPillView: View {
                                         .foregroundStyle(.secondary)
                                 }
                             } icon: {
-                                Image(systemName: "clock.fill").foregroundStyle(.blue)
+                                Image(systemName: "clock.fill").foregroundStyle(Color(hex: "#66AD89"))
                             }
                         }
                     }
@@ -330,7 +332,7 @@ struct EditPillView: View {
                                     Image(uiImage: uiImage).resizable().scaledToFill().frame(width: 180, height: 180).clipShape(RoundedRectangle(cornerRadius: 20)).shadow(radius: 5)
                                 } else {
                                     VStack(spacing: 10) {
-                                        Image(systemName: "camera.circle.fill").font(.system(size: 50)).foregroundStyle(.blue)
+                                        Image(systemName: "camera.circle.fill").font(.system(size: 50)).foregroundStyle(Color(hex: "#66AD89"))
                                         Text("更換照片").font(.caption).foregroundStyle(.secondary)
                                     }.frame(width: 180, height: 180).background(Color.gray.opacity(0.1)).clipShape(RoundedRectangle(cornerRadius: 20)).overlay(RoundedRectangle(cornerRadius: 20).stroke(style: StrokeStyle(lineWidth: 2, dash: [5])).foregroundStyle(.gray.opacity(0.3)))
                                 }
@@ -359,6 +361,7 @@ struct EditPillView: View {
                         pill.medicationTime = medicationTime
                         pill.enableReminder = enableReminder
                         pill.reminderTime = enableReminder ? reminderTime : nil
+                        pill.updatedAt = Date()
                         
                         do {
                             try context.save()
@@ -380,6 +383,7 @@ struct EditPillView: View {
                 }
             }
         }
+        .tint(.black)
         .sheet(isPresented: $showReminderTimePicker) {
             ReminderTimePickerView(reminderTime: $reminderTime, isPresented: $showReminderTimePicker)
         }
@@ -415,3 +419,4 @@ struct ReminderTimePickerView: View {
         }
     }
 }
+

@@ -46,7 +46,7 @@ struct StatsView: View {
         // 固定顯示的分類清單
         let categories = ["維他命", "礦物質", "保健食品", "處方藥", "中藥", "一般"]
         
-        return categories.compactMap { category in
+        return categories.compactMap { category -> CategoryStat? in
             // 以修剪空白後的字串進行比對，避免使用者輸入空白造成錯誤分類
             let categoryPills = pills.filter { $0.category.trimmingCharacters(in: .whitespacesAndNewlines) == category }
             guard !categoryPills.isEmpty else { return nil }
@@ -81,7 +81,7 @@ struct StatsView: View {
                     ZStack {
                         Circle().stroke(Color.gray.opacity(0.2), lineWidth: 20)
                         Circle().trim(from: 0, to: progress)
-                            .stroke(LinearGradient(colors: [.blue, .cyan], startPoint: .top, endPoint: .bottom), style: StrokeStyle(lineWidth: 20, lineCap: .round))
+                            .stroke(LinearGradient(colors: [AppColor.green, AppColor.green.opacity(0.7)], startPoint: .top, endPoint: .bottom), style: StrokeStyle(lineWidth: 20, lineCap: .round))
                             .rotationEffect(.degrees(-90)).animation(.easeOut, value: progress)
                         VStack {
                             Text("\(Int(progress * 100))%").font(.system(size: 50, weight: .bold, design: .rounded))
@@ -91,9 +91,9 @@ struct StatsView: View {
                     
                     // 總覽統計
                     VStack(spacing: 15) {
-                        StatRow(icon: "pill.fill", color: Color.blue, title: "總藥物數", value: "\(pills.count) 種")
-                        StatRow(icon: "checkmark.circle.fill", color: Color.green, title: "今日已服", value: "\(Int(progress * Double(pills.count))) 次")
-                        StatRow(icon: "list.bullet", color: Color.purple, title: "分類數量", value: "\(categoryStats.count) 類")
+                        StatRow(icon: "pill.fill", color: AppColor.green, title: "總藥物數", value: "\(pills.count) 種")
+                        StatRow(icon: "checkmark.circle.fill", color: AppColor.green, title: "今日已服", value: "\(Int(progress * Double(pills.count))) 次")
+                        StatRow(icon: "list.bullet", color: AppColor.green, title: "分類數量", value: "\(categoryStats.count) 類")
                     }
                     .padding().frame(maxWidth: .infinity).background(Color.white).cornerRadius(16).padding(.horizontal, 16)
                     
@@ -146,7 +146,7 @@ struct CategoryStatsView: View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
                 Image(systemName: "chart.bar.fill")
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(AppColor.green)
                 Text("分類統計")
                     .font(.headline)
                 Spacer()

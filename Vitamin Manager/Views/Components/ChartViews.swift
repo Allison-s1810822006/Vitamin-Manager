@@ -12,7 +12,7 @@ struct PieChartView: View {
                 PieSlice(
                     startAngle: startAngle(for: index),
                     endAngle: endAngle(for: index),
-                    color: stat.color
+                    color: AppColor.green
                 )
             }
         }
@@ -74,7 +74,7 @@ struct BarChartView: View {
                     VStack {
                         ZStack(alignment: .bottom) {
                             Capsule().frame(width: 18, height: 80).foregroundColor(Color.gray.opacity(0.15))
-                            Capsule().frame(width: 18, height: maxValue == 0 ? 0 : CGFloat(value) / CGFloat(maxValue) * 80).foregroundColor(.blue)
+                            Capsule().frame(width: 18, height: maxValue == 0 ? 0 : CGFloat(value) / CGFloat(maxValue) * 80).foregroundColor(AppColor.green)
                         }
                         Text(labels[i]).font(.caption2).foregroundStyle(.secondary)
                     }
@@ -86,3 +86,4 @@ struct BarChartView: View {
 
 // 注意：CategoryStatsView 和 CategoryRowView 已經在 StatsView.swift 中定義
 // 為了避免重複定義，這裡移除了這些視圖
+

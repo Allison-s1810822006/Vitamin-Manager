@@ -13,8 +13,9 @@ class VitaminItem {
     var medicationTime: String // 服藥時間 (飯前/飯後等)
     var reminderTime: Date? // 提醒時間
     var enableReminder: Bool // 是否啟用提醒
+    var updatedAt: Date? // 新增最後更新時間
     
-    init(name: String, category: String = "一般", lastTakenDate: Date? = nil, photoData: Data? = nil, quantity: Int = 1, colorHex: String = "blue", medicationTime: String = "飯後", reminderTime: Date? = nil, enableReminder: Bool = false) {
+    init(name: String, category: String = "一般", lastTakenDate: Date? = nil, photoData: Data? = nil, quantity: Int = 1, colorHex: String = "blue", medicationTime: String = "飯後", reminderTime: Date? = nil, enableReminder: Bool = false, updatedAt: Date? = nil) {
         self.name = name
         self.category = category
         self.lastTakenDate = lastTakenDate
@@ -24,6 +25,7 @@ class VitaminItem {
         self.medicationTime = medicationTime
         self.reminderTime = reminderTime
         self.enableReminder = enableReminder
+        self.updatedAt = updatedAt
     }
     
     // 將顏色字符串轉換為 Color

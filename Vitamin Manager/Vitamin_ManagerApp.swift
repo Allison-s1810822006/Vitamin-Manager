@@ -27,6 +27,9 @@ struct Vitamin_ManagerApp: App {
         
         // 初始化通知管理器
         setupNotifications()
+        
+        // 舊資料色碼遷移
+        migrateLegacyColors()
     }
     
     var body: some Scene {
@@ -65,6 +68,44 @@ struct Vitamin_ManagerApp: App {
             }
         }
     }
+    
+    // MARK: - 舊資料色碼遷移
+    private func migrateLegacyColors() {
+        let mapping: [String: String] = [
+            "green": "#66AD89",
+            "red": "#C76B6B",
+            "orange": "#E0A15F",
+            "yellow": "#E6D37A",
+            "blue": "#6B9FC7",
+            "purple": "#9A7BC7",
+            "pink": "#D88AA8",
+            "gray": "#9AA7A0"
+        ]
+        do {
+            let context = container.mainContext
+            var descriptor = FetchDescriptor<VitaminItem>()
+            descriptor.fetchLimit = 10000
+            let items = try context.fetch(descriptor)
+            var changed = false
+            for item in items {
+                let key = item.colorHex.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+                if let newHex = mapping[key] {
+                    if item.colorHex != newHex {
+                        item.colorHex = newHex
+                        changed = true
+                    }
+                }
+            }
+            if changed {
+                try context.save()
+                print("✅ 已完成舊資料色碼遷移")
+            } else {
+                print("ℹ️ 無需色碼遷移或已是最新")
+            }
+        } catch {
+            print("❌ 色碼遷移失敗: \(error)")
+        }
+    }
 }
 
 // MARK: - 通知代理
@@ -89,3 +130,4 @@ class NotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
         completionHandler()
     }
 }
+
