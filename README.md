@@ -134,6 +134,8 @@ VitaminManager
 
 ### 我的藥盒（清單與已服用狀態）
 <img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 56 09" src="https://github.com/user-attachments/assets/63fa95ef-12dc-4fa9-9c01-1f466e9823d5" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 26" src="https://github.com/user-attachments/assets/991363c9-897d-449b-a2dd-19e3ef57a395" />
+
 
 ### 今日統計（完成率）
 <img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 42" src="https://github.com/user-attachments/assets/629484a4-8210-4cac-8a31-964217031f1f" />
