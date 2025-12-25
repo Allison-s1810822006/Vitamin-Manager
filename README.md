@@ -72,6 +72,7 @@ VitaminManager
 │   └── VitaminWidgetLiveActivity.swift
 │
 └── VitaminManagerApp.swift
+
 ```
 ---
 
@@ -132,19 +133,24 @@ VitaminManager
 ## 📱 App Screenshots
 
 ### 我的藥盒（清單與已服用狀態）
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 28" src="https://github.com/user-attachments/assets/ff8c77ee-eaa0-4987-aa1e-4de6fa4984f1" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 56 09" src="https://github.com/user-attachments/assets/63fa95ef-12dc-4fa9-9c01-1f466e9823d5" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 26" src="https://github.com/user-attachments/assets/991363c9-897d-449b-a2dd-19e3ef57a395" />
+
 
 ### 今日統計（完成率）
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 57" src="https://github.com/user-attachments/assets/a0dc9559-77a2-4739-b734-cb768c9274f1" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 42" src="https://github.com/user-attachments/assets/629484a4-8210-4cac-8a31-964217031f1f" />
+
 
 ### 分類統計（維他命 / 保健食品）
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 57" src="https://github.com/user-attachments/assets/a0dc9559-77a2-4739-b734-cb768c9274f1" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 42" src="https://github.com/user-attachments/assets/21f3195e-4467-4925-9fc5-c2d14d75258c" />
+
 
 ### 一週服藥紀錄
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 52 00" src="https://github.com/user-attachments/assets/4f2a583a-7c40-4649-850d-ae75c3f9cfaa" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 48" src="https://github.com/user-attachments/assets/fb71cd2e-7e81-4f2a-a8f4-57ebb0ba6b9f" />
+
 
 ### 設定頁面
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 52 04" src="https://github.com/user-attachments/assets/b5841f56-cdac-4baa-910c-65907269b259" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 52" src="https://github.com/user-attachments/assets/bd0d75b2-78aa-4a8e-8144-ed9ca6dc373b" />
 
 
 ---
@@ -152,20 +158,22 @@ VitaminManager
 ## 🧩 Widget & Notification
 
 ### 桌面 Widget
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 52 10" src="https://github.com/user-attachments/assets/e09634fb-51ce-4963-8029-1f35fe6f11a1" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 59 41" src="https://github.com/user-attachments/assets/b2749d18-0d5f-493d-9c16-abcbd391b2f8" />
 
 
 ### 服藥提醒通知
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 03" src="https://github.com/user-attachments/assets/62bf882e-420b-4627-a311-92fc0df4b24d" />
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 05" src="https://github.com/user-attachments/assets/1ef38d85-4d21-49b4-b4d8-b76a13659b18" />
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 51 07" src="https://github.com/user-attachments/assets/bef13217-564a-408f-ba07-974595dfebf1" />
-<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-20 at 19 52 23" src="https://github.com/user-attachments/assets/a490f99b-5e5e-4fc9-8c5a-fbada5b16ea1" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 23 01 20" src="https://github.com/user-attachments/assets/287e9c22-cb34-4d98-ba99-987933af8adf" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 01" src="https://github.com/user-attachments/assets/525f6c17-1a41-4708-9464-767970ba3249" />
+<img width="201" height="437" alt="Simulator Screenshot - iPhone 17 Pro - 2025-12-25 at 22 57 04" src="https://github.com/user-attachments/assets/86f0b703-9c76-467d-9f54-5a2dfcababdf" />
+
 
 
 ---
 
 ## 🎥 Demo（影片操作示範）
-https://github.com/user-attachments/assets/ea050126-8f20-4e7b-b99e-da47217b9a87
+https://github.com/user-attachments/assets/8cf485db-db8c-44bc-93e0-f64e5275052b
+
+
 
 ---
 
